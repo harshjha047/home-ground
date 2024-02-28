@@ -153,7 +153,6 @@ body {
   display: flex;
   position: fixed;
   z-index: 9;
-
   justify-content: space-evenly;
   align-items: center;
 }
@@ -163,6 +162,11 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+#nav_box_left_svg {
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
 }
 #nav_box_right {
   height: 99%;
@@ -223,14 +227,87 @@ body {
   width: 300px;
   border: 5px solid #1b1b22;
   border-radius: 50%;
-  background-image: url("media/20231216_172457_0000.png");
+  background-image: url("https://i.postimg.cc/tpjfdSPq/IMG-20240206-175257-916.jpg");
   background-size: cover;
   transition: height 0.2s, width 0.2s;
 }
 #image_dp:hover {
   height: 330px;
   width: 330px;
+  border-radius: 1vh;
   border: 2px solid #1b1b22;
+}
+.card_dp {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(238, 238, 238, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  gap: 0px;
+}
+
+/* for all social containers*/
+.socialContainer_dp {
+  width: 0px;
+  height: 0px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+/* instagram*/
+.containerOne_dp:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo_dp:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+/* linkdin*/
+.containerThree_dp:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.containerFour_dp:hover {
+  background-color: #128c7e;
+  transition-duration: 0.3s;
+}
+
+.socialContainer_dp:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg_dp {
+  width: 0px;
+}
+
+.socialSvg_dp path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer_dp:hover .socialSvg_dp {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 #right {
@@ -468,4 +545,316 @@ body {
 }
 #card1-back2 {
   background-image: url("https://routenote.com/blog/wp-content/uploads/2022/03/148701539_3724512380920015_7768163355512350905_n.png");
+}
+@media screen and (max-width: 1000px) {
+  #aside {
+    height: 0%;
+    width: 0vw;
+  }
+  #aside_bottom {
+    height: 0vh;
+    width: 0vw;
+    background-color: #32323900;
+    box-shadow: 0px 0px 0px 0px #50505000;
+  }
+  #nav {
+    background-color: #1b1b22;
+  }
+  #main {
+    height: 100%;
+    width: 100%;
+  }
+  #nav_box_right_contect {
+    height: 0px;
+    width: 0px;
+    border-radius: 0px;
+    margin-left: 0px;
+  }
+  #nav_box_right_contect p {
+    font-size: 0px;
+    font-weight: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  #top {
+    height: 50%;
+    width: 100%;
+    margin-top: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  #left {
+    height: 210px;
+    width: 210px;
+    overflow: visible;
+  }
+  #image_dp {
+    height: 200px;
+    width: 200px;
+    transition: height 0.2s, width 0.2s, border-radius 0.2s;
+  }
+  #image_dp:hover {
+    height: 230px;
+    width: 230px;
+    border-radius: 8px;
+  }
+
+  #right {
+    width: 49%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #card {
+    height: 140px;
+    width: 240px;
+    padding: 10px;
+  }
+  #card h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 3px;
+  }
+  #card h3 {
+    font-size: 11px;
+    font-weight: 300;
+  }
+  #card p {
+    font-size: 7px;
+    font-weight: 100;
+    margin-top: 3px;
+  }
+  #card:hover {
+    height: 140px;
+    width: 240px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 120px 6px rgba(0, 34, 255, 0.46);
+    -moz-box-shadow: 0px 0px 120px 6px rgba(0, 34, 255, 0.46);
+    box-shadow: 0px 0px 120px 6px rgba(0, 34, 255, 0.46);
+  }
+  .card {
+    width: fit-content;
+    height: fit-content;
+    background-color: #1b1b22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+
+  /* for all social containers*/
+  .socialContainer {
+    width: 35px;
+    height: 35px;
+    background-color: #1b1b22;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+  }
+  .socialSvg {
+    width: 14px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #top {
+    height: 300px;
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 15px;
+    border-bottom: 1px solid #404057;
+  }
+  #left {
+    height: 150px;
+    width: 150px;
+    background: transparent;
+  }
+  #image_dp {
+    height: 140px;
+    width: 140px;
+    border: 3px solid #1b1b22;
+  }
+  #image_dp:hover {
+    height: 160px;
+    width: 160px;
+    border: 2px solid #1b1b22;
+  }
+
+  #right {
+    width: 100%;
+    height: 130px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #card {
+    height: 100px;
+    width: 296px;
+    padding: 2px;
+  }
+  #card h1 {
+    font-size: 35px;
+  }
+  #card h3 {
+    font-size: 17px;
+  }
+  #card p {
+    font-size: 11px;
+  }
+  #card:hover {
+    height: 100px;
+    width: 296px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 100px 6px rgba(0, 34, 255, 0.46);
+    -moz-box-shadow: 0px 0px 100px 6px rgba(0, 34, 255, 0.46);
+    box-shadow: 0px 0px 100px 6px rgba(0, 34, 255, 0.46);
+  }
+  .card {
+    width: 0px;
+    height: 0px;
+  }
+  /* for all social containers*/
+  .socialContainer {
+    width: 0px;
+    height: 0px;
+  }
+  .socialSvg {
+    width: 0px;
+  }
+  #bottom {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #bottom_txt {
+    height: 9%;
+    width: 93%;
+    display: flex;
+    align-items: center;
+  }
+  #bottom_txt h2 {
+    font-size: 22px;
+    font-weight: 100;
+  }
+  #bottom-cards1 {
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .card1 {
+    width: 350px;
+    height: 234px;
+    perspective: 1000px;
+    margin: 15px;
+  }
+  #bottom_txt h2 {
+    font-size: 22px;
+    font-weight: 100;
+    margin: 10px;
+  }
+  .card_dp {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(238, 238, 238, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px;
+    gap: 10px;
+  }
+
+  /* for all social containers*/
+  .socialContainer_dp {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+  }
+  /* instagram*/
+  .containerOne_dp:hover {
+    background-color: #d62976;
+    transition-duration: 0.3s;
+  }
+  /* twitter*/
+  .containerTwo_dp:hover {
+    background-color: #00acee;
+    transition-duration: 0.3s;
+  }
+  /* linkdin*/
+  .containerThree_dp:hover {
+    background-color: #0072b1;
+    transition-duration: 0.3s;
+  }
+  /* Whatsapp*/
+  .containerFour_dp:hover {
+    background-color: #128c7e;
+    transition-duration: 0.3s;
+  }
+
+  .socialContainer_dp:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+  }
+
+  .socialSvg_dp {
+    width: 17px;
+  }
+
+  .socialSvg_dp path {
+    fill: rgb(255, 255, 255);
+  }
+
+  .socialContainer_dp:hover .socialSvg_dp {
+    animation: slide-in-top 0.3s both;
+  }
+
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  #top_left {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 95%;
+  }
+  #nav_box_left_svg {
+    height: auto;
+    width: auto;
+    overflow: visible;
+  }
 }
